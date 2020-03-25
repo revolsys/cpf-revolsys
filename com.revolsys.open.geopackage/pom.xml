@@ -6,7 +6,7 @@
   <parent>
     <groupId>com.revolsys.open</groupId>
     <artifactId>com.revolsys.open.parent</artifactId>
-    <version>0.CPF-6.0.0-SNAPSHOT</version>
+    <version>0.CPF-6.0.0-RELEASE</version>
   </parent>
   <artifactId>com.revolsys.open.geopackage</artifactId>
   <packaging>jar</packaging>
