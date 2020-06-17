@@ -5,7 +5,7 @@
   <parent>
     <artifactId>revolsys-parent</artifactId>
     <groupId>com.revolsys.open</groupId>
-    <version>TRUNK-SNAPSHOT</version>
+    <version>0.CPF-6.1.1-RELEASE</version>
   </parent>
   <artifactId>revolsys-core</artifactId>
   <name>RS Core</name>
