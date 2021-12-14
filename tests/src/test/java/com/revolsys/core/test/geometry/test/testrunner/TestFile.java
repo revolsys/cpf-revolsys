@@ -36,16 +36,15 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Enumeration;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.revolsys.collection.map.LinkedHashMapEx;
-import com.revolsys.collection.map.MapEx;
 import com.revolsys.core.test.geometry.test.geomop.GeometryOperation;
 import com.revolsys.geometry.model.GeometryFactory;
 import com.revolsys.io.FileUtil;
 import com.revolsys.io.map.MapSerializer;
+import com.revolsys.record.io.format.json.JsonObject;
+import com.revolsys.record.io.format.json.JsonObjectHash;
 import com.revolsys.util.Property;
 
 import junit.framework.Test;
@@ -117,7 +116,7 @@ public class TestFile extends TestSuite implements MapSerializer {
   }
 
   public Map<String, Object> getProperties() {
-    final Map<String, Object> properties = new LinkedHashMap<>();
+    final JsonObject properties = JsonObject.hash();
     addToMap(properties, "geometryFactory", this.geometryFactory);
     return properties;
   }
@@ -162,8 +161,8 @@ public class TestFile extends TestSuite implements MapSerializer {
   }
 
   @Override
-  public MapEx toMap() {
-    final MapEx map = new LinkedHashMapEx();
+  public JsonObject toMap() {
+    final JsonObject map = new JsonObjectHash();
     map.put("type", "test");
     addToMap(map, "testDescription", this.testDescription);
 
